@@ -6,13 +6,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
         python-version: 3.11
 
+    - name: list files
+      run: ls -ltra ../requirements.txt
+
     - name: Install dependencies
       run: |
-        pip install -r /Users/kalden/Desktop/github-actions-lab1-q1/requirements.txt
+        pip install -r requirements.txt
